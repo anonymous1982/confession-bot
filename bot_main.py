@@ -9,12 +9,12 @@ import git
 import os
 
 """
-$ python3.2 skeleton_extend.py <token>
+$ python3.6.2 skeleton_extend.py <token>
 A skeleton for your telepot programs - extend from `Bot` and define a `handle` method.
 """
 
 """
-This bot's purpose: to take text confessions and (anonymously) send them to https://telegram.me/shithole_confessions
+This bot's purpose: to take text confessions and (anonymously) send them to a channel
 """
 
 """
@@ -275,7 +275,7 @@ class BangarangsBot(telepot.Bot):
                         self.contactAdmin(chat_id, msg)
 
                     elif (message_words[0].replace("/help@shitholeconfessionsbot", "/help") == '/help'):
-                        self.sendMessage(chat_id, "This bot sends a public, anonymous confession to the [shithole Confessions Channel](https://telegram.me/shithole_confessions) here on Telegram. \n\nTo send a confession in, just do /confess [confession].\n\nThis bot only accepts messages in private, and will not respond in groups.\n\nMessage @HorseySurprise#4274 with any bugs, issues, or suggestions.", reply_to_message_id=msg['message_id'], parse_mode='Markdown')
+                        self.sendMessage(chat_id, "This bot sends a public, anonymous confession to the [shithole Confessions Channel]. \n\nTo send a confession in, just do /confess [confession].\n\nThis bot only accepts messages in private, and will not respond in groups.\n\nMessage @HorseySurprise#4274 with any bugs, issues, or suggestions.", reply_to_message_id=msg['message_id'], parse_mode='Markdown')
 
                     elif (message_words[0].replace("/github@shitholeconfessionsbot", "/github") == '/github'):
                         self.sauce(chat_id, msg)
