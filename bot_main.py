@@ -9,7 +9,7 @@ import git
 import os
 
 """
-$ python3.6.2 skeleton_extend.py <token>
+$ python-3.6.2 skeleton_extend.py <token>
 A skeleton for your telepot programs - extend from `Bot` and define a `handle` method.
 """
 
